@@ -23,7 +23,7 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id")
-    private UUID id; // Identificador único universal. Se der problema, usar String
+    private String id; // Identificador único universal. Se der problema, usar String
     @Column(name = "nome", length = 50, nullable = false)
     private String nome;
     @Column(name = "descricao", length = 300)
