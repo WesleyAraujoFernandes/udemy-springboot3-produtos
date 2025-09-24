@@ -1,15 +1,19 @@
 package io.github.cursodsousa.produtosapi.controller;
 
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.github.cursodsousa.produtosapi.model.Produto;
-import lombok.ToString;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("produtos")
 public class ProdutoController {
-    public void salvar(Produto produto) {
+
+    @PostMapping
+    public Produto salvar(@RequestBody Produto produto) {
         System.out.println("Produto salvo: " + produto);
+        return produto;
     }
 }
